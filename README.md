@@ -7,6 +7,8 @@ A wrapper that can be used to circumnavigate the Seek() bug present in the strea
 
 Code example:
 
+```csharp
 ExternalStorageFile file = await device.GetFileAsync(filename); // device is an instance of ExternalStorageDevice
 Stream streamOriginal = await file.OpenForReadAsync();
 ExternalStorageFileWrapper streamToUse = new ExternalStorageFileWrapper(streamOriginal);
+```
